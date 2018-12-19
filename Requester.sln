@@ -10,11 +10,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "readmd_photos", "readmd_photos", "{8CA931C4-9DE4-4955-A630-FB4F1A6697CD}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\Pictures\gazou.PNG = ..\..\..\Pictures\gazou.PNG
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,9 +23,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{8CA931C4-9DE4-4955-A630-FB4F1A6697CD} = {1AFCC7C5-A0EF-4B40-8E4C-FE4823BA1928}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B7AFB230-FA6E-45F9-8BF5-70EE37E2FACF}
