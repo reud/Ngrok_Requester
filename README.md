@@ -1,27 +1,27 @@
 Ngrok Requester
 ====
 
-��w�̎��Ƃ̎��R�ۑ�ō쐬�����Angrok��URL��GET���N�G�X�g���ق�̂��傱���Ƃ����ȒP�ɑ����A�v���P�[�V����
+
+大学の授業の自由課題で作成した、ngrokのURLにGETリクエストをほんのちょこっとだけ簡単に送れるアプリケーション
+
 
 ## Description
-ngrok��URL��GET���N�G�X�g�Ƀ����N���b�N��GET���N�G�X�g�𑗂�܂�([������].ngrok.io/�̂�)
+ngrokのURLにGETリクエストにワンクリックでGETリクエストを送ります([文字列].ngrok.io/のみ)
 
 ## Demo
-![�f���摜](https://github.com/reud/Ngrok_Requester/blob/master/Requester/demo.PNG?raw=true "Demo")
-
-## VS. 
+![demo画像](https://github.com/reud/Ngrok_Requester/blob/master/Requester/demo.PNG?raw=true "Demo")
 
 ## Requirement
-
+.NET Framework ・・・多分
 ## Usage
+中央にあるテキストボックスに生成された文字列を入力してボタンを押すだけ！(CTRL+Sでも可)
+出力結果はボタンの下に出力されます。
 
 ## Install
 
-## Contribution
 
 ## Licence
-
+MIT License
 
 ## Author
-
-
+[reud](https://github.com/reud)
