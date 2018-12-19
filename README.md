@@ -8,6 +8,8 @@ Ngrok Requester
 ## Description
 ngrokのURLにGETリクエストにワンクリックでGETリクエストを送ります([文字列].ngrok.io/のみ)
 
+※ver 1.1 からシリアルポートを監視してデータが来たら、GETリクエストを送れるようになりました。
+
 ## Demo
 ![demo画像](https://github.com/reud/Ngrok_Requester/blob/master/Requester/demo.PNG?raw=true "Demo")
 
@@ -16,6 +18,8 @@ ngrokのURLにGETリクエストにワンクリックでGETリクエストを送
 ## Usage
 中央にあるテキストボックスに生成された文字列を入力してボタンを押すだけ！(CTRL+Sでも可)
 出力結果はボタンの下に出力されます。
+
+※シリアルポートからデータが来たらリクエストを送るようにしたい場合、右上から該当ポートを選択してください。
 
 
 ## Licence

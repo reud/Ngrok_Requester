@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO.Ports;
 
 namespace Requester
 {
@@ -17,7 +18,19 @@ namespace Requester
         public Form1()
         {
             InitializeComponent();
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            string[] ports = SerialPort.GetPortNames();
+            foreach (string port in ports)
+            {
+                comboBox1.Items.Add(port);
+                Console.WriteLine(port);
+                comboBox1.SelectedItem = port;
+                serialPort1.Close();
+                serialPort1.PortName = port;
+                serialPort1.Open();
+            }
         }
+    
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
@@ -119,6 +132,33 @@ namespace Requester
 
                 WaitResponse();
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            serialPort1.Close();
+            string port = (String)comboBox1.SelectedItem;
+            Console.WriteLine(port);
+            serialPort1.PortName = port;
+            serialPort1.Open();
+        }
+
+        private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
+        {
+            try
+            {
+                string data = serialPort1.ReadLine();
+                if (!string.IsNullOrEmpty(data))
+                {
+                    Console.WriteLine(data);
+                    SendKeys.SendWait("^S");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }
