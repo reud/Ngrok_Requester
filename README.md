@@ -7,7 +7,7 @@ Ngrok Requester
 ngrokのURLにGETリクエストにワンクリックでGETリクエストを送ります([文字列].ngrok.io/のみ)
 
 ## Demo
-
+![デモ画像](https://github.com/reud/Ngrok_Requester/blob/master/Requester/demo.PNG?raw=true "Demo")
 
 ## VS. 
 
@@ -21,8 +21,7 @@ ngrokのURLにGETリクエストにワンクリックでGETリクエストを送ります([文字列].ngrok.
 
 ## Licence
 
-[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
 
 ## Author
 
-[tcnksm](https://github.com/tcnksm)
+
