@@ -150,8 +150,21 @@ namespace Requester
                 string data = serialPort1.ReadLine();
                 if (!string.IsNullOrEmpty(data))
                 {
-                    Console.WriteLine(data);
-                    SendKeys.SendWait("^S");
+                    if (textBox1.Text == string.Empty)
+                    {
+                        MessageBox.Show("テキストボックスの中身が空です。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    string url = "https://" + textBox1.Text + ".ngrok.io/";
+
+                    async Task WaitResponse()
+                    {
+                        var response = await client.GetAsync(url);
+                        var contents = await response.Content.ReadAsStringAsync();
+                        richTextBox1.Text = contents;
+                    }
+
+                    WaitResponse();
                 }
             }
             catch (Exception ex)
