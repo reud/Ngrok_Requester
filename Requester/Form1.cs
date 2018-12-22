@@ -22,12 +22,20 @@ namespace Requester
             string[] ports = SerialPort.GetPortNames();
             foreach (string port in ports)
             {
-                comboBox1.Items.Add(port);
-                Console.WriteLine(port);
-                comboBox1.SelectedItem = port;
-                serialPort1.Close();
-                serialPort1.PortName = port;
-                serialPort1.Open();
+                try
+                {
+                    comboBox1.Items.Add(port);
+                    Console.WriteLine(port);
+                    comboBox1.SelectedItem = port;
+                    serialPort1.Close();
+                    serialPort1.PortName = port;
+                    serialPort1.Open();
+                }
+                catch(Exception e)
+                {
+                    richTextBox1.Text += e.Message;
+                }
+
             }
         }
     
