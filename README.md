@@ -23,7 +23,9 @@ ngrokのURLにGETリクエストにワンクリックでGETリクエストを送
 
 シリアルポートにデータを送る際、Arduino UNOで送る時のサンプルコードを書きました。
 サンプルコードは[SerialSender_Sample.ino](https://github.com/reud/Ngrok_Requester/blob/master/SerialSender_Sample.ino)にあります。
-
+　
+SampleのArduibnoの配線図
+![配線図](https://raw.githubusercontent.com/reud/Ngrok_Requester/master/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202018-12-22%2015.28.14.png)
 
 
 ## Licence
