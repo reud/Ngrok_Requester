@@ -144,11 +144,18 @@ namespace Requester
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            serialPort1.Close();
-            string port = (String)comboBox1.SelectedItem;
-            Console.WriteLine(port);
-            serialPort1.PortName = port;
-            serialPort1.Open();
+            try
+            {
+                serialPort1.Close();
+                string port = (String)comboBox1.SelectedItem;
+                Console.WriteLine(port);
+                serialPort1.PortName = port;
+                serialPort1.Open();
+            }
+            catch(Exception ex)
+            {
+                richTextBox1.Text += ex.Message;
+            }
         }
 
         private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
